@@ -8,5 +8,7 @@ class Project < ActiveRecord::Base
   		:maximum => 250}
 
   	validates :duration, :presence => true
-  	validates :status, :presence => true	
+  	validates :status, :presence => true
+  	
+  has_many :comments, :dependent => :destroy	
 end

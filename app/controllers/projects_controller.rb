@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  http_basic_authenticate_with :name => "user", :password => "secret", :except => [:index, :show]
+
   # GET /projects
   # GET /projects.json
   def index
